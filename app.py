@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
+from PIL import Image
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="My First Web Page", page_icon=":tada:", layout="wide")
@@ -11,8 +12,17 @@ def load_lottieurl(url: str):
         return None
     return r.json()
 
+# use local css
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+local_css("style/style.css")
+
 # --- LOAD ASSETS ---
 lottie_coding = load_lottieurl("https://lottie.host/b8347808-b365-493c-8e68-680ef844d61c/NbyJ92QuTQ.json")
+img_menta = Image.open("images/Menta.png")
+img_refacer = Image.open("images/refacer.png")
 
 # --- HEADER ---
 with st.container():
@@ -34,3 +44,58 @@ with st.container():
 
     with right_column:
         st_lottie(lottie_coding, speed=1, height=300, key="coding")
+
+
+# --- PROJECTS ---
+with st.container():
+    st.write("---")
+    st.header("Projects: :computer:")
+    st.write("##")
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        # insert image here
+        st.image(img_refacer, width=300)
+    with text_column:
+        st.subheader("Deep Fake: The Harder They Fall")
+        st.write(
+            """
+            I replaced Cherokee Bill's face with mine in this scene in The Harder they Fall movie. I used Refacer to do this. Refacer is a web app that allows you to replace faces in videos. You can find it [here](https://github.com/xaviviro/refacer?ref=alxappliedai.com).
+                 """)
+        st.markdown("[View Project >](https://www.linkedin.com/posts/benson-mugure-017153196_alxabrai-deepfake-appliedai-activity-7142568176705347584-PVdY?utm_source=share&utm_medium=member_desktop)")
+        
+with st.container():
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        st.image(img_menta, width=300)
+    with text_column:
+        st.subheader("Web App: Mentorship")
+        st.write(
+            """
+            This is a web app that connects mentors and mentees. It is built using Nodejs, Express-js, Mustache, nedb, and Bootstrap.
+                 """)
+        st.markdown("[View Project >](https://menta-b-mugure-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/)")
+
+# --- CONTACT ME ---
+with st.container():
+    st.write("---")
+    st.header("Contact Me: :email:")
+    st.write("##")
+    
+    # used the free service at formsubmit.co to send the form data to my email
+    contact_form = """
+<form action="https://formsubmit.co/b.mugure@alustudent.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+     <input type="text" name="name" placeholder="Your Name" required>
+     <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+     <button type="submit">Send</button>
+</form>
+
+"""
+
+    left_column, right_column = st.columns(2)
+    with left_column:
+        st.markdown(contact_form, unsafe_allow_html=True)
+    with right_column:
+        st.empty()
+        
