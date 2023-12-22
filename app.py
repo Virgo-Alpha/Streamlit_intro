@@ -20,6 +20,7 @@ def local_css(file_name):
 local_css("style/style.css")
 
 # --- LOAD ASSETS ---
+# Find the animation at lottiefiles.com and copy the url here
 lottie_coding = load_lottieurl("https://lottie.host/b8347808-b365-493c-8e68-680ef844d61c/NbyJ92QuTQ.json")
 img_menta = Image.open("images/Menta.png")
 img_refacer = Image.open("images/refacer.png")
