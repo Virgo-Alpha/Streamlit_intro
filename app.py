@@ -61,7 +61,9 @@ with st.container():
         st.subheader("Deep Fake: The Harder They Fall")
         st.write(
             """
-            I replaced Cherokee Bill's face with mine in this scene in The Harder they Fall movie. I used Refacer to do this. Refacer is a web app that allows you to replace faces in videos. You can find it [here](https://github.com/xaviviro/refacer?ref=alxappliedai.com).
+            - I replaced Cherokee Bill's face with mine in this scene in The Harder they Fall movie. 
+            - I used Refacer to do this. Refacer is a web app that allows you to replace faces in videos. 
+            - You can find it [here](https://github.com/xaviviro/refacer?ref=alxappliedai.com).
                  """)
         st.markdown("[View Project >](https://www.linkedin.com/posts/benson-mugure-017153196_alxabrai-deepfake-appliedai-activity-7142568176705347584-PVdY?utm_source=share&utm_medium=member_desktop)")
         
@@ -73,7 +75,8 @@ with st.container():
         st.subheader("Web App: Mentorship")
         st.write(
             """
-            This is a web app that connects mentors and mentees. It is built using Nodejs, Express-js, Mustache, nedb, and Bootstrap.
+            - This is a web app that connects mentors and mentees. 
+            - It is built using Nodejs, Express-js, Mustache, nedb, and Bootstrap.
                  """)
         st.markdown("[View Project >](https://menta-b-mugure-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/)")
 
