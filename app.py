@@ -24,6 +24,7 @@ local_css("style/style.css")
 lottie_coding = load_lottieurl("https://lottie.host/b8347808-b365-493c-8e68-680ef844d61c/NbyJ92QuTQ.json")
 img_menta = Image.open("images/Menta.png")
 img_refacer = Image.open("images/refacer.png")
+img_dashboard = Image.open("images/dashboard.png")
 
 # --- HEADER ---
 with st.container():
@@ -75,6 +76,22 @@ with st.container():
             This is a web app that connects mentors and mentees. It is built using Nodejs, Express-js, Mustache, nedb, and Bootstrap.
                  """)
         st.markdown("[View Project >](https://menta-b-mugure-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/)")
+
+with st.container():
+    image_column, text_column = st.columns((1, 2))
+    with image_column:
+        st.image(img_dashboard, width=300)
+    with text_column:
+        st.subheader("Streamlit Dashboard: Data Visualization using Plotly and duckbd")
+        st.write(
+            """
+            - A sample dashboard built using Streamlit, Plotly, and duckdb.
+            - Allows you to visualize data from a data file that you upload.
+            - Automated visualizations are generated using python functions and plotly.
+            - Initialized with a placeholder xlsx data file.
+                 """)
+        st.markdown("[View Project >](https://prototype-dashboard.streamlit.app/)")
+
 
 # --- CONTACT ME ---
 with st.container():
