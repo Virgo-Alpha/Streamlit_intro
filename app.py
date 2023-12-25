@@ -7,14 +7,15 @@ from PIL import Image
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Portfolio Page", page_icon=":tada:", layout="wide")
 
-# the below makes my profile image circular. Searched the div class from the browsers inspect elements
-st.markdown("""
-  <style>
-    .st-emotion-cache-1v0mbdj > img{
-      border-radius: 50%;
-    }
-  </style>
-""", unsafe_allow_html=True)
+# ! Makes all pictures circular
+# st.markdown("""
+#   <style>
+#     // st-emotion-cache-0 e1f1d6gn0
+#     .st-emotion-cache-1v0mbdj::first-child {
+#       border-radius: 50%;
+#     }
+#   </style>
+# """, unsafe_allow_html=True)
 
 def load_lottieurl(url: str):
     r = requests.get(url)
@@ -44,12 +45,13 @@ with st.container():
     col1.title("A software engineer who loves to code :computer:")
     col1.write("I am a software engineer who loves to code and build things. I am passionate about learning new technologies and applying them to solve real-world problems.")
     col1.write("[Learn More >](https://www.linkedin.com/in/benson-mugure-017153196/)")
+    # ? Make only the profile picture below circular
     col2.image(img_profile, width=150, output_format='PNG', caption='Me')
 
 # --- WHAT I DO ---
 with st.container():
     st.write("---")
-    left_column, right_column = st.columns([2, 1])
+    left_column, right_column = st.columns(2)
     with left_column:
         st.header("What I do: :hammer_and_wrench:")
         st.write("##")
