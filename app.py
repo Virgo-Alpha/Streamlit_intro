@@ -7,10 +7,10 @@ from PIL import Image
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Portfolio Page", page_icon=":tada:", layout="wide")
 
+# the below makes my profile image circular. Searched the div class from the browsers inspect elements
 st.markdown("""
   <style>
-    // this is for all img elements in the Streamlit div class nesting a img
-    .st-emotion-cache-1v0mbdj .e115fcil1 > img {
+    .st-emotion-cache-1v0mbdj > img{
       border-radius: 50%;
     }
   </style>
@@ -49,7 +49,7 @@ with st.container():
 # --- WHAT I DO ---
 with st.container():
     st.write("---")
-    left_column, right_column = st.columns(2)
+    left_column, right_column = st.columns([2, 1])
     with left_column:
         st.header("What I do: :hammer_and_wrench:")
         st.write("##")
