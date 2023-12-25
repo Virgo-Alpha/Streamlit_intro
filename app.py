@@ -3,8 +3,18 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 
+
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="My First Web Page", page_icon=":tada:", layout="wide")
+st.set_page_config(page_title="Portfolio Page", page_icon=":tada:", layout="wide")
+
+st.markdown("""
+  <style>
+    // this is for all img elements in the Streamlit div class nesting a img
+    .st-emotion-cache-1v0mbdj .e115fcil1 > img {
+      border-radius: 50%;
+    }
+  </style>
+""", unsafe_allow_html=True)
 
 def load_lottieurl(url: str):
     r = requests.get(url)
@@ -25,13 +35,16 @@ lottie_coding = load_lottieurl("https://lottie.host/b8347808-b365-493c-8e68-680e
 img_menta = Image.open("images/Menta.png")
 img_refacer = Image.open("images/refacer.png")
 img_dashboard = Image.open("images/dashboard.png")
+img_profile = Image.open("images/ben.jpeg")
 
 # --- HEADER ---
 with st.container():
-    st.subheader("Hi, I am Ben :wave:")
-    st.title("A software engineer who loves to code :computer:")
-    st.write("I am a software engineer who loves to code and build things. I am passionate about learning new technologies and applying them to solve real-world problems.")
-    st.write("[Learn More >](https://www.linkedin.com/in/benson-mugure-017153196/)")
+    col1, col2 = st.columns([2, 1])
+    col1.subheader("Hi, I am Ben :wave:")
+    col1.title("A software engineer who loves to code :computer:")
+    col1.write("I am a software engineer who loves to code and build things. I am passionate about learning new technologies and applying them to solve real-world problems.")
+    col1.write("[Learn More >](https://www.linkedin.com/in/benson-mugure-017153196/)")
+    col2.image(img_profile, width=150, output_format='PNG', caption='Me')
 
 # --- WHAT I DO ---
 with st.container():
