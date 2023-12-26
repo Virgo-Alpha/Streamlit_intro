@@ -39,6 +39,7 @@ img_dashboard = Image.open("images/dashboard.png")
 img_profile = Image.open("images/ben.jpeg")
 img_fake_news = Image.open("images/fake_news.png")
 img_job_data = Image.open("images/job_data.png")
+img_tembea_kenya = Image.open("images/tembea_kenya.png")
 
 # --- HEADER ---
 with st.container():
@@ -148,6 +149,19 @@ with st.expander("Click to view projects"):
                 - Find the code on Github [here](https://github.com/Emmastro/ip-project-2)
                     """)
             st.markdown("[View Project >](https://ip-project-2.vercel.app/)")
+
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_tembea_kenya, width=300)
+        with text_column:
+            st.subheader("Website: Mentorship")
+            st.write(
+                """
+                - I developed a concierge website that would enable locals, expats, and tourists to look for different services available in my country of origin based on their needs.
+                - Project code can be found [here](https://github.com/Virgo-Alpha/Tembea-Kenya)
+                    """)
+            st.markdown("[View Project >](https://tembeakenya1.netlify.app/)")
 
 # --- CONTACT ME ---
 with st.container():
