@@ -45,10 +45,15 @@ with st.container():
     col1, col2 = st.columns([2, 1])
     col1.subheader("Hi, I am Ben :wave:")
     col1.title("A software engineer who loves to code :computer:")
-    col1.write("I am a software engineer who loves to code and build things. I am passionate about learning new technologies and applying them to solve real-world problems.")
+    col1.write("I am passionate about learning new technologies and applying them to solve real-world problems.")
+    col1.write("In particular, I am interested in DARQ [Distributed Ledgers, AI, Extended Realities and Quantum Computing] or ABCD [AI, Blockchain, Cloud and Data] technologies.")
+    col1.write("I am also passionate about entrepreneurship and Sustainability, especially through Circular Economy.")
+    col1.write("I am a cinephile and I play chess in my free time.")
+    col1.write("I also read books and write creative articles on [manenoz.com](https://sarunisays.wordpress.com/virgo-alpha/) and technical ones on [Medium](https://medium.com/@b.mugure).")
+    col1.write("I have also written poems at [AllPoetry](https://allpoetry.com/Virgo_Alpha).")
     col1.write("[Learn More >](https://www.linkedin.com/in/benson-mugure-017153196/)")
     # ? Make only the profile picture below circular
-    col2.image(img_profile, width=150, output_format='PNG', caption='Me')
+    col2.image(img_profile, width=300, output_format='PNG', caption='Me')
 
 # --- WHAT I DO ---
 with st.container():
@@ -124,7 +129,7 @@ with st.expander("Click to view projects"):
             st.write(
                 """
                 - A simple web app built with Flask to detect fake news.
-                - powered by TfidfVectorizer and PassiveAggressiveClassifier from sklearn to classify news as fake or real upon request from a user
+                - Powered by TfidfVectorizer and PassiveAggressiveClassifier from sklearn to classify news as fake or real upon request from a user
                 - Find the code on Github [here](https://github.com/Virgo-Alpha/Fake_News_Detection)
                     """)
             st.markdown("[View Project >](https://benson.pythonanywhere.com/)")
