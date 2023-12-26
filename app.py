@@ -37,6 +37,8 @@ img_menta = Image.open("images/Menta.png")
 img_refacer = Image.open("images/refacer.png")
 img_dashboard = Image.open("images/dashboard.png")
 img_profile = Image.open("images/ben.jpeg")
+img_fake_news = Image.open("images/fake_news.png")
+img_job_data = Image.open("images/job_data.png")
 
 # --- HEADER ---
 with st.container():
@@ -68,48 +70,79 @@ with st.container():
     st.write("---")
     st.header("Projects: :computer:")
     st.write("##")
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        # insert image here
-        st.image(img_refacer, width=300)
-    with text_column:
-        st.subheader("Deep Fake: The Harder They Fall")
-        st.write(
-            """
-            - I replaced Cherokee Bill's face with mine in this scene in The Harder they Fall movie. 
-            - I used Refacer to do this. Refacer is a web app that allows you to replace faces in videos. 
-            - You can find it [here](https://github.com/xaviviro/refacer?ref=alxappliedai.com).
-                 """)
-        st.markdown("[View Project >](https://www.linkedin.com/posts/benson-mugure-017153196_alxabrai-deepfake-appliedai-activity-7142568176705347584-PVdY?utm_source=share&utm_medium=member_desktop)")
-        
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(img_menta, width=300)
-    with text_column:
-        st.subheader("Web App: Mentorship")
-        st.write(
-            """
-            - This is a web app that connects mentors and mentees. 
-            - It is built using Nodejs, Express-js, Mustache, nedb, and Bootstrap.
-                 """)
-        st.markdown("[View Project >](https://menta-b-mugure-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/)")
 
-with st.container():
-    image_column, text_column = st.columns((1, 2))
-    with image_column:
-        st.image(img_dashboard, width=300)
-    with text_column:
-        st.subheader("Streamlit Dashboard: Data Visualization using Plotly and duckbd")
-        st.write(
-            """
-            - A sample dashboard built using Streamlit, Plotly, and duckdb.
-            - Allows you to visualize data from a data file that you upload.
-            - Automated visualizations are generated using python functions and plotly.
-            - Initialized with a placeholder xlsx data file.
-                 """)
-        st.markdown("[View Project >](https://prototype-dashboard.streamlit.app/)")
+with st.expander("Click to view projects"):
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            # insert image here
+            st.image(img_refacer, width=300)
+        with text_column:
+            st.subheader("Deep Fake: The Harder They Fall")
+            st.write(
+                """
+                - I replaced Cherokee Bill's face with mine in this scene in The Harder they Fall movie. 
+                - I used Refacer to do this. Refacer is a web app that allows you to replace faces in videos. 
+                - You can find it [here](https://github.com/xaviviro/refacer?ref=alxappliedai.com).
+                    """)
+            st.markdown("[View Project >](https://www.linkedin.com/posts/benson-mugure-017153196_alxabrai-deepfake-appliedai-activity-7142568176705347584-PVdY?utm_source=share&utm_medium=member_desktop)")
+            
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_menta, width=300)
+        with text_column:
+            st.subheader("Web App: Mentorship")
+            st.write(
+                """
+                - This is a web app that connects mentors and mentees. 
+                - It is built using Nodejs, Express-js, Mustache, nedb, and Bootstrap.
+                    """)
+            st.markdown("[View Project >](https://menta-b-mugure-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/)")
 
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_dashboard, width=300)
+        with text_column:
+            st.subheader("Streamlit Dashboard: Data Visualization")
+            st.write(
+                """
+                - A sample dashboard built using Streamlit, Plotly, and duckdb.
+                - Allows you to visualize data from a data file that you upload.
+                - Automated visualizations are generated using python functions and plotly.
+                - Initialized with a placeholder xlsx data file.
+                    """)
+            st.markdown("[View Project >](https://prototype-dashboard.streamlit.app/)")
+
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_fake_news, width=300)
+        with text_column:
+            st.subheader("Web App: Fake News Detection")
+            st.write(
+                """
+                - A simple web app built with Flask to detect fake news.
+                - powered by TfidfVectorizer and PassiveAggressiveClassifier from sklearn to classify news as fake or real upon request from a user
+                - Find the code on Github [here](https://github.com/Virgo-Alpha/Fake_News_Detection)
+                    """)
+            st.markdown("[View Project >](https://benson.pythonanywhere.com/)")
+
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_job_data, width=300)
+        with text_column:
+            st.subheader("Web App: Data on Jobs Available")
+            st.write(
+                """
+                - A simple web app built with friends
+                - The project involved finding sources of interesting data related to jobs worldwide including two dissimilar sources then selecting and applying suitable visualisations to represent the data.
+                - The data was sourced live via APIs, rather than being previously downloaded.
+                - Find the code on Github [here](https://github.com/Emmastro/ip-project-2)
+                    """)
+            st.markdown("[View Project >](https://ip-project-2.vercel.app/)")
 
 # --- CONTACT ME ---
 with st.container():
