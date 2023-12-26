@@ -155,7 +155,7 @@ with st.expander("Click to view projects"):
         with image_column:
             st.image(img_tembea_kenya, width=300)
         with text_column:
-            st.subheader("Website: Mentorship")
+            st.subheader("Website: Concierge and travel Services")
             st.write(
                 """
                 - I developed a concierge website that would enable locals, expats, and tourists to look for different services available in my country of origin based on their needs.
