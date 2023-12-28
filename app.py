@@ -40,6 +40,7 @@ img_profile = Image.open("images/ben.jpeg")
 img_fake_news = Image.open("images/fake_news.png")
 img_job_data = Image.open("images/job_data.png")
 img_tembea_kenya = Image.open("images/tembea_kenya.png")
+img_opus_futura = Image.open("images/Opus_Futura.png")
 
 # --- HEADER ---
 with st.container():
@@ -134,6 +135,21 @@ with st.expander("Click to view projects"):
                 - Find the code on Github [here](https://github.com/Virgo-Alpha/Fake_News_Detection)
                     """)
             st.markdown("[View Project >](https://benson.pythonanywhere.com/)")
+
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_opus_futura, width=300)
+        with text_column:
+            st.subheader("Web App: Opus Futura")
+            st.write(
+                """
+                - A simple web app built with friends to demonstrate the future of work for the 2023 SD Worx Hackathon (Sparkathon).
+                - Opus AI is a software that allows employees to manage their tasks, get support from AI to optimize their workflows and generates reports that offer insights on performance and career development opportunities.
+                - View the project [here](https://docs.google.com/presentation/d/13boiVSN6j1A9mFH0a7dphd8rL5EixLTk/edit?usp=sharing&ouid=102435224940560953120&rtpof=true&sd=true) and the demo [here](https://drive.google.com/file/d/1nqAEdfJOi5pMPPBkOesndzoLsoxVcnK0/view?usp=sharing).
+                - Find the code on Github [here](https://github.com/Stoichiometrical/sdWorx)
+                    """)
+            st.markdown("[View Project >](https://velvety-pudding-c3b592.netlify.app/)")
 
     with st.container():
         image_column, text_column = st.columns((1, 2))
