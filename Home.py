@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
-from streamlit_option_menu import option_menu
+# from streamlit_option_menu import option_menu
 
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
