@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
-from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Projects' Page",
                    page_icon=":tada:",
