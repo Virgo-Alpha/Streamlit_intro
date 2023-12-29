@@ -2,10 +2,15 @@ import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
+from streamlit_option_menu import option_menu
 
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
-st.set_page_config(page_title="Portfolio Page", page_icon=":tada:", layout="wide")
+st.set_page_config(page_title="Portfolio Page",
+                   page_icon=":tada:",
+                   layout="wide",
+                   initial_sidebar_state="collapsed"
+                   )
 
 # ! Makes all pictures circular
 # st.markdown("""
@@ -16,6 +21,42 @@ st.set_page_config(page_title="Portfolio Page", page_icon=":tada:", layout="wide
 #     }
 #   </style>
 # """, unsafe_allow_html=True)
+
+# # 1. Nav bar as sidebar
+# with st.sidebar:
+#     selected = option_menu(
+#         menu_title=None,
+#         options=["Home", "Projects", "Contact Me"],
+#         icons=["🏠", "💻", "📧"],
+#         menu_icon="cast",
+#         default_index=0,
+#     )
+
+# # 2. Nav bar as horizontal menu
+# selected = option_menu(
+#         menu_title=None,
+#         options=["Home", "Projects", "Contact Me"],
+#         icons=["🏠", "💻", "📧"],
+#         menu_icon="cast",
+#         default_index=0,
+#         orientation="horizontal",
+#         styles={
+#                 "container": {"padding": "0!important", "background-color": "black"},
+#                 "icon": {"color": "orange", "font-size": "25px"},
+#                 "nav-link": {
+#                     "font-size": "25px",
+#                     "text-align": "left",
+#                     "margin": "0px",
+#                     "--hover-color": "#eee",
+#                 },
+#                 "nav-link-selected": {"background-color": "green"},
+#             },
+#     )
+
+# st.title(f"You are on the {selected} page")
+
+# st.sidebar.success("Selecet a page from the above")
+
 
 def load_lottieurl(url: str):
     r = requests.get(url)
