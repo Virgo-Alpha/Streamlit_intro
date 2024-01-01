@@ -22,7 +22,7 @@ st.set_page_config(page_title="Portfolio Page",
 #   </style>
 # """, unsafe_allow_html=True)
 
-# # 1. Nav bar as sidebar
+# # ! 1. Nav bar as sidebar
 # with st.sidebar:
 #     selected = option_menu(
 #         menu_title=None,
@@ -32,7 +32,7 @@ st.set_page_config(page_title="Portfolio Page",
 #         default_index=0,
 #     )
 
-# # 2. Nav bar as horizontal menu
+# # ! 2. Nav bar as horizontal menu
 # selected = option_menu(
 #         menu_title=None,
 #         options=["Home", "Projects", "Contact Me"],
@@ -54,7 +54,6 @@ st.set_page_config(page_title="Portfolio Page",
 #     )
 
 # st.title(f"You are on the {selected} page")
-
 # st.sidebar.success("Selecet a page from the above")
 
 
