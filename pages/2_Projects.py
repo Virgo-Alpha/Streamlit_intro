@@ -138,3 +138,17 @@ with st.container():
             - Project code can be found [here](https://github.com/Virgo-Alpha/Tembea-Kenya)
                 """)
         st.markdown("[View Project >](https://tembeakenya1.netlify.app/)")
+
+with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_linkedin_resume_builder, width=300)
+        with text_column:
+            st.subheader("Website: LinkedIn Resume Builder")
+            st.write(
+                """
+                - I developed a website that allows one to scrap their LinkedIn profile and generate a resume from it.
+                - I used selenium, beautiful soup, and streamlit to build it.
+                - Project code can be found [here](https://github.com/Virgo-Alpha/linkedin_resume_builder)
+                    """)
+            st.markdown("[View Project >](https://linkedin-resume-builder.streamlit.app/)")
