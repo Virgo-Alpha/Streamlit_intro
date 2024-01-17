@@ -83,6 +83,7 @@ img_tembea_kenya = Image.open("images/tembea_kenya.png")
 img_opus_futura = Image.open("images/Opus_Futura.png")
 img_sustravels = Image.open("images/sustravels.png")
 img_linkedin_resume_builder = Image.open("images/linkedin_resume_builder.png")
+img_CarbonCalc = Image.open("images/CarbonCalc.png")
 
 # --- HEADER ---
 with st.container():
@@ -149,6 +150,21 @@ with st.expander("Click to view projects"):
                     """)
             st.markdown("[View Project >](https://menta-b-mugure-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/)")
 
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_CarbonCalc, width=300)
+        with text_column:
+            st.subheader("Website: LinkedIn Resume Builder")
+            st.write(
+                """
+                - This Streamlit app allows users to estimate their carbon footprint based on the distance traveled between two cities.
+                - Additionally, it provides information on the environmental impact by calculating the potential harm to wildlife in terms of the number of animals that would be affected.
+                - I used haversine, pandas, openpyxl and streamlit to build it.
+                - Project code can be found [here](https://github.com/Virgo-Alpha/CarbonCalc)
+                    """)
+            st.markdown("[View Project >](https://carbon-calc.streamlit.app)")
+    
     with st.container():
         image_column, text_column = st.columns((1, 2))
         with image_column:
