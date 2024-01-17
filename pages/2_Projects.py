@@ -61,7 +61,7 @@ with st.container():
         with image_column:
             st.image(img_CarbonCalc, width=300)
         with text_column:
-            st.subheader("Website: LinkedIn Resume Builder")
+            st.subheader("Website: Carbon emission calculator")
             st.write(
                 """
                 - This Streamlit app allows users to estimate their carbon footprint based on the distance traveled between two cities.
