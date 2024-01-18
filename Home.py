@@ -147,8 +147,9 @@ with st.expander("Click to view projects"):
                 """
                 - This is a web app that connects mentors and mentees. 
                 - It is built using Nodejs, Express-js, Mustache, nedb, and Bootstrap.
+                - You can find the project code [here](https://github.com/Virgo-Alpha/Menta)
                     """)
-            st.markdown("[View Project >](https://menta-b-mugure-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/)")
+            st.markdown("[View Project >](https://menta.onrender.com/)")
 
     with st.container():
         image_column, text_column = st.columns((1, 2))
