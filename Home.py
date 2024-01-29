@@ -84,6 +84,7 @@ img_opus_futura = Image.open("images/Opus_Futura.png")
 img_sustravels = Image.open("images/sustravels.png")
 img_linkedin_resume_builder = Image.open("images/linkedin_resume_builder.png")
 img_CarbonCalc = Image.open("images/CarbonCalc.png")
+img_Story_gen = Image.open("images/Story-gen.png")
 
 # --- HEADER ---
 with st.container():
@@ -122,6 +123,23 @@ with st.container():
     st.write("##")
 
 with st.expander("Click to view projects"):
+
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            # insert image here
+            st.image(img_Story_gen, width=300)
+        with text_column:
+            st.subheader("Gen Ai + Web App: Story Generator")
+            st.write(
+                """
+                - This Streamlit app uses the Google Generative AI API to generate stories based on user prompts.
+                - Users can input a prompt, generate a story, and clear the response.
+                - Tech stack: Streamlit, Google Generative AI API, and Python. 
+                - You can find the code [here](https://github.com/Virgo-Alpha/Story_generator).
+                    """)
+            st.markdown("[View Project >](https://story-generator2.streamlit.app/)")
+
     with st.container():
         image_column, text_column = st.columns((1, 2))
         with image_column:
