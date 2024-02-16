@@ -3,6 +3,9 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 
+# TODO: Sub-divide the projects into categories - SWE & Web Development, Data Science & ML, GenAI.
+# TODO: Add downloadable resume that can be previewed on the website.
+
 st.set_page_config(page_title="Projects' Page",
                    page_icon=":tada:",
                    layout="wide",
