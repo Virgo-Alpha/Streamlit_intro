@@ -9,7 +9,7 @@ from PIL import Image
 st.set_page_config(page_title="Portfolio Page",
                    page_icon=":tada:",
                    layout="wide",
-                   initial_sidebar_state="collapsed"
+                   initial_sidebar_state="expanded"
                    )
 
 # ! Makes all pictures circular
