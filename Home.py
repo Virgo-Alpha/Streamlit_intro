@@ -96,6 +96,7 @@ with st.container():
     col1.title("A software engineer who loves to code :computer:")
     col1.write("I am passionate about learning new technologies and applying them to solve real-world problems.")
     col1.write("In particular, I am interested in DARQ [Distributed Ledgers, AI, Extended Realities and Quantum Computing] or ABCD [AI, Blockchain, Cloud and Data] technologies.")
+    col1.write("You can find my different projects on my [Github](https://github.com/Virgo-Alpha) and my professional profile on [LinkedIn](https://www.linkedin.com/in/benson-mugure-017153196/).")
     col1.write("I am also passionate about entrepreneurship and Sustainability, especially through Circular Economy.")
     col1.write("I am a cinephile and I play chess in my free time.")
     col1.write("I also read books and write creative articles on [manenoz.com](https://sarunisays.wordpress.com/virgo-alpha/) and technical ones on [Medium](https://medium.com/@b.mugure).")
