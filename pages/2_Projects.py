@@ -3,7 +3,7 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 
-# TODO: Sub-divide the projects into categories - SWE & Web Development, Data Science & ML, GenAI.
+# // TODO: Sub-divide the projects into categories - SWE & Web Development, Data Science & ML, GenAI.
 # TODO: Add downloadable resume that can be previewed on the website.
 
 st.set_page_config(page_title="Projects' Page",
@@ -31,6 +31,9 @@ img_sustravels = Image.open("images/sustravels.png")
 img_linkedin_resume_builder = Image.open("images/linkedin_resume_builder.png")
 img_CarbonCalc = Image.open("images/CarbonCalc.png")
 img_Story_gen = Image.open("images/Story-gen.png")
+img_ship = Image.open("images/ship.jpeg")
+img_catordog = Image.open("images/dogorcat.jpeg")
+img_books = Image.open("images/books.jpeg")
 
 
 # --- PROJECTS ---
@@ -133,6 +136,48 @@ with st.container():
 
 with st.expander("Click to view projects"):
     # TODO: Add data science and machine learning projects here.
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_ship, width=300)
+        with text_column:
+            st.subheader("Shipping Optimization | Regression | SVM + Neural Network")
+            st.write(
+                """
+                - This project aims to predict shipping times for different shipments using regression models.
+                -  It includes historical shipment data, code for model training, and evaluation
+                - Find the code [here](https://github.com/Virgo-Alpha/Shipping_Optimization) , the project presentation [here](https://www.canva.com/design/DAF2RYnQJFo/GSvrpeeKyGQNx2EQVkn-LQ/edit) and the demo [here](https://drive.google.com/file/d/1dInjebLlqU7V34lJEmxeTyX9VxAbEl8b/view?usp=sharing).
+                - Tech stack: Scikit-learn, TensorFlow, jupyter notebook, matplotlib, seaborn.
+                    """)
+            st.markdown("[View Project >](https://github.com/Virgo-Alpha/Shipping_Optimization)")
+
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_catordog, width=300)
+        with text_column:
+            st.subheader("Cat or Dog | Classification | CNN | Computer Vision")
+            st.write(
+                """
+                - A freecode camp certification challenge where I predicted whether an image was one of a cat or a dog using Convolutional Neural Networks.
+                - I achieved a 66% accuracy score.
+                - Tech stack: Tensorflow, Numpy, matplotlib, seaborn, jupyter notebook.
+                    """)
+            st.markdown("[View Project >](https://github.com/Virgo-Alpha/fcc_ml_projects/blob/main/fcc_cat_dog.ipynb)")
+
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_books, width=300)
+        with text_column:
+            st.subheader("Book Recommendation Engine | KNN | Collaborative Filtering")
+            st.write(
+                """
+                - A freecode camp certification challenge where I created an engine that recommends 5 books given the title of the first.
+                - Tech stack: Scikit-learn, scipy, pandas, numpy, matplotlib
+                    """)
+            st.markdown("[View Project >](https://github.com/Virgo-Alpha/fcc_ml_projects/blob/main/fcc_book_recommendation_knn.ipynb)")
+
     with st.container():
         image_column, text_column = st.columns((1, 2))
         with image_column:
