@@ -88,6 +88,7 @@ img_Story_gen = Image.open("images/Story-gen.png")
 img_ship = Image.open("images/ship.jpeg")
 img_catordog = Image.open("images/dogorcat.jpeg")
 img_books = Image.open("images/books.jpeg")
+img_robot = Image.open("images/robot.jpg")
 
 # --- HEADER ---
 with st.container():
@@ -171,6 +172,20 @@ with st.expander("Click to view projects"):
                 - View the project [here](https://docs.google.com/presentation/d/13boiVSN6j1A9mFH0a7dphd8rL5EixLTk/edit?usp=sharing&ouid=102435224940560953120&rtpof=true&sd=true) and the demo [here](https://drive.google.com/file/d/1nqAEdfJOi5pMPPBkOesndzoLsoxVcnK0/view?usp=sharing) and the code on Github [here](https://github.com/Stoichiometrical/sdWorx)
                     """)
             st.markdown("[View Project >](https://velvety-pudding-c3b592.netlify.app/)")
+
+    with st.container():
+        image_column, text_column = st.columns((1, 2))
+        with image_column:
+            st.image(img_robot, width=300)
+        with text_column:
+            st.subheader("SWE Challenge: Robotic Control Algorithm")
+            st.write(
+                """
+                - This program simulates a robotic algorithm for controlling a two-wheeled differential drive robot in a grid-based environment.
+                - The robot is capable of moving forward, backward, turning left, and turning right within a predefined grid.
+                - Tech stack: Python3, Tkinter, pytest, and matplotlib.
+                - View the project code [here](https://github.com/Virgo-Alpha/Robotic_Control_Algorithm) and the user manual [here](https://github.com/Virgo-Alpha/Robotic_Control_Algorithm/blob/main/User%20Manual.pdf)
+                    """)
 
     with st.container():
             image_column, text_column = st.columns((1, 2))
