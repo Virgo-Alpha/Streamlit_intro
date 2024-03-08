@@ -1,7 +1,6 @@
 
 ## License (MIT)
 
-
 MIT License
 
 Copyright (c) 2024 Benson Mugure
