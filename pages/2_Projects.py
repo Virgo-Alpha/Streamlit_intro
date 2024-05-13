@@ -35,6 +35,7 @@ img_ship = Image.open("images/ship.jpeg")
 img_catordog = Image.open("images/dogorcat.jpeg")
 img_books = Image.open("images/books.jpeg")
 img_robot = Image.open("images/robot.jpg")
+img_aws = Image.open("images/AWS.jpg")
 
 
 # --- PROJECTS ---
