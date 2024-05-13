@@ -352,7 +352,7 @@ with st.expander("Click to view projects"):
                 st.subheader("Cloud Project: Image and Text Detection using AWS Rekognition")
                 st.write(
                     """
-                    - I built an architecture on AWS that utilizes EC2, S3, Cloudfront, API Gateway, SQS, Lambda, DynamoDB, Rekognition and SNS to label text and images in a photo.
+                    - I built an architecture on AWS that utilizes EC2, S3, Cloudfront, API Gateway, SQS, Lambda, DynamoDB, Rekognition and SNS to label text and objects in a photo.
                     - I used the AWS Console as well as the AWS SDK and CLI. The language used is majorly Python.
                     - You can read about it [here](https://drive.google.com/file/d/1_2Ib1s4FqsMDURUBCyhMoPYyL2r0H8Ej/view?usp=sharing).
                         """)
