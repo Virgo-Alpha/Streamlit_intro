@@ -257,6 +257,21 @@ with st.expander("Click to view projects"):
                     - You can find it [here](https://github.com/xaviviro/refacer?ref=alxappliedai.com).
                         """)
                 st.markdown("[View Project >](https://www.linkedin.com/posts/benson-mugure-017153196_alxabrai-deepfake-appliedai-activity-7142568176705347584-PVdY?utm_source=share&utm_medium=member_desktop)")
+
+    with st.container():
+            image_column, text_column = st.columns((1, 2))
+            with image_column:
+                # insert image here
+                st.image(img_aws, width=300)
+            with text_column:
+                st.subheader("Cloud Project: Image and Text Detection using AWS Rekognition")
+                st.write(
+                    """
+                    - I built an architecture on AWS that utilizes EC2, S3, Cloudfront, API Gateway, SQS, Lambda, DynamoDB, Rekognition and SNS to label text and images in a photo.
+                    - I used the AWS Console as well as the AWS SDK and CLI. The language used is majorly Python.
+                    - You can read about it [here](https://drive.google.com/file/d/1_2Ib1s4FqsMDURUBCyhMoPYyL2r0H8Ej/view?usp=sharing).
+                        """)
+                st.markdown("[View Project >](https://github.com/Virgo-Alpha/CPD/blob/main/S2038770CPD/README.md)")
     
     with st.container():
             image_column, text_column = st.columns((1, 2))
